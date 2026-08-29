@@ -1,5 +1,4 @@
-```html
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +6,7 @@
 
     <title>For Jeniesys</title>
 
-    <!-- Confetti library -->
+    <!-- Confetti -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
     <style>
@@ -22,7 +21,6 @@
         body {
             margin: 0;
             min-height: 100vh;
-
             font-family: Georgia, "Times New Roman", serif;
             color: #4a2934;
 
@@ -59,31 +57,23 @@
 
         .glow {
             position: fixed;
-
             width: 250px;
             height: 250px;
-
             border-radius: 50%;
-
             filter: blur(60px);
-
             opacity: .35;
-
             pointer-events: none;
-
             z-index: 0;
         }
 
         .glow.one {
             background: #ffffff;
-
             top: -80px;
             left: -80px;
         }
 
         .glow.two {
             background: #ff8fb8;
-
             bottom: -100px;
             right: -80px;
         }
@@ -94,21 +84,11 @@
 
         .heart {
             position: fixed;
-
             bottom: -30px;
-
             font-size: 20px;
-
             opacity: 0;
-
-            animation:
-                floatHeart
-                8s
-                linear
-                infinite;
-
+            animation: floatHeart 8s linear infinite;
             pointer-events: none;
-
             z-index: 1;
         }
 
@@ -137,12 +117,8 @@
         }
 
         @keyframes floatHeart {
-
             0% {
-                transform:
-                    translateY(0)
-                    rotate(0deg);
-
+                transform: translateY(0) rotate(0deg);
                 opacity: 0;
             }
 
@@ -155,10 +131,7 @@
             }
 
             100% {
-                transform:
-                    translateY(-110vh)
-                    rotate(25deg);
-
+                transform: translateY(-110vh) rotate(25deg);
                 opacity: 0;
             }
         }
@@ -169,21 +142,16 @@
 
         .container {
             position: relative;
-
             z-index: 2;
 
             width: min(650px, 100%);
-
             margin: auto;
 
             background: rgba(255,255,255,.92);
-
             backdrop-filter: blur(12px);
 
             border: 1px solid rgba(255,255,255,.9);
-
-            border-radius:
-                clamp(20px, 4vw, 30px);
+            border-radius: clamp(20px, 4vw, 30px);
 
             padding:
                 clamp(25px, 5vw, 42px)
@@ -196,28 +164,18 @@
                 0 25px 60px rgba(150,55,95,.20),
                 0 5px 15px rgba(150,55,95,.10);
 
-            animation:
-                cardAppear
-                1.2s
-                ease;
+            animation: cardAppear 1.2s ease;
         }
 
         @keyframes cardAppear {
-
             from {
                 opacity: 0;
-
-                transform:
-                    translateY(30px)
-                    scale(.97);
+                transform: translateY(30px) scale(.97);
             }
 
             to {
                 opacity: 1;
-
-                transform:
-                    translateY(0)
-                    scale(1);
+                transform: translateY(0) scale(1);
             }
         }
 
@@ -226,17 +184,12 @@
         ========================= */
 
         .small-heart {
-            font-size:
-                clamp(22px, 6vw, 30px);
-
-            animation:
-                heartbeat
-                1.8s
-                infinite;
+            display: inline-block;
+            font-size: clamp(22px, 6vw, 30px);
+            animation: heartbeat 1.8s infinite;
         }
 
         @keyframes heartbeat {
-
             0%, 100% {
                 transform: scale(1);
             }
@@ -256,31 +209,21 @@
 
         h1 {
             margin: 10px 0 8px;
-
             color: #c34f76;
-
-            font-size:
-                clamp(2rem, 8vw, 3.2rem);
-
+            font-size: clamp(2rem, 8vw, 3.2rem);
             line-height: 1.15;
 
             text-shadow:
-                0 3px 12px
-                rgba(195,79,118,.15);
+                0 3px 12px rgba(195,79,118,.15);
         }
 
         .subtitle {
             color: #95606f;
-
-            font-size:
-                clamp(.9rem, 3vw, 1rem);
-
+            font-size: clamp(.9rem, 3vw, 1rem);
             font-style: italic;
-
             line-height: 1.5;
 
-            margin-bottom:
-                clamp(18px, 5vw, 28px);
+            margin-bottom: clamp(18px, 5vw, 28px);
         }
 
         /* =========================
@@ -289,9 +232,7 @@
 
         .photo-frame {
             width: min(390px, 100%);
-
-            height:
-                clamp(230px, 65vw, 330px);
+            height: clamp(230px, 65vw, 330px);
 
             margin:
                 clamp(18px, 5vw, 27px)
@@ -299,8 +240,7 @@
 
             padding: 7px;
 
-            border-radius:
-                clamp(17px, 4vw, 24px);
+            border-radius: clamp(17px, 4vw, 24px);
 
             background:
                 linear-gradient(
@@ -311,21 +251,13 @@
                 );
 
             box-shadow:
-                0 15px 35px
-                rgba(180,70,110,.25),
+                0 15px 35px rgba(180,70,110,.25),
+                0 0 35px rgba(244,166,189,.35);
 
-                0 0 35px
-                rgba(244,166,189,.35);
-
-            animation:
-                photoFloat
-                4s
-                ease-in-out
-                infinite;
+            animation: photoFloat 4s ease-in-out infinite;
         }
 
         @keyframes photoFloat {
-
             0%, 100% {
                 transform: translateY(0);
             }
@@ -338,24 +270,18 @@
         .photo-inner {
             width: 100%;
             height: 100%;
-
             overflow: hidden;
-
             border-radius: 15px;
-
             background: #fff0f5;
         }
 
         .photo-inner img {
             width: 100%;
             height: 100%;
-
             object-fit: cover;
-
             display: block;
 
-            transition:
-                transform .7s ease;
+            transition: transform .7s ease;
         }
 
         .photo-frame:hover img {
@@ -368,9 +294,7 @@
 
         .divider {
             display: flex;
-
             align-items: center;
-
             gap: 12px;
 
             margin:
@@ -381,9 +305,7 @@
         .divider::before,
         .divider::after {
             content: "";
-
             height: 1px;
-
             flex: 1;
 
             background:
@@ -405,7 +327,6 @@
 
         .divider span {
             color: #d05d80;
-
             font-size: 18px;
         }
 
@@ -414,33 +335,25 @@
         ========================= */
 
         .envelope {
-            width:
-                min(150px, 42vw);
-
-            height:
-                min(105px, 30vw);
+            width: min(150px, 42vw);
+            height: min(105px, 30vw);
 
             margin: 18px auto 10px;
 
             position: relative;
-
             cursor: pointer;
 
             perspective: 700px;
 
-            transition:
-                transform .3s ease;
+            transition: transform .3s ease;
         }
 
         .envelope:hover {
-            transform:
-                translateY(-4px)
-                scale(1.03);
+            transform: translateY(-4px) scale(1.03);
         }
 
         .envelope-back {
             position: absolute;
-
             inset: 0;
 
             border-radius: 12px;
@@ -453,13 +366,11 @@
                 );
 
             box-shadow:
-                0 12px 25px
-                rgba(180,70,110,.22);
+                0 12px 25px rgba(180,70,110,.22);
         }
 
         .envelope-flap {
             position: absolute;
-
             inset: 0;
 
             height: 65%;
@@ -480,8 +391,7 @@
 
             transform-origin: top center;
 
-            transition:
-                transform .65s ease;
+            transition: transform .65s ease;
 
             z-index: 3;
         }
@@ -501,21 +411,17 @@
 
             z-index: 2;
 
-            transition:
-                transform .7s ease;
+            transition: transform .7s ease;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
 
             color: #c34f76;
-
             font-size: 1.7rem;
 
             box-shadow:
-                0 3px 10px
-                rgba(100,40,60,.12);
+                0 3px 10px rgba(100,40,60,.12);
         }
 
         .envelope.open .envelope-flap {
@@ -531,22 +437,15 @@
         ========================= */
 
         .letter {
-            font-size:
-                clamp(.98rem, 3vw, 1.08rem);
-
+            font-size: clamp(.98rem, 3vw, 1.08rem);
             line-height: 1.8;
-
             color: #56343e;
-
             padding: 0 4px;
         }
 
         .letter .opening {
-            font-size:
-                clamp(1.15rem, 4vw, 1.3rem);
-
+            font-size: clamp(1.15rem, 4vw, 1.3rem);
             color: #c34f76;
-
             font-weight: bold;
         }
 
@@ -556,18 +455,13 @@
 
         .highlight {
             color: #c34f76;
-
             font-weight: bold;
         }
 
         .forever {
-            font-size:
-                clamp(1.05rem, 4vw, 1.2rem);
-
+            font-size: clamp(1.05rem, 4vw, 1.2rem);
             color: #c34f76;
-
             font-weight: bold;
-
             margin-top: 25px;
         }
 
@@ -583,7 +477,6 @@
             margin-top: 20px;
 
             border: none;
-
             border-radius: 50px;
 
             padding: 13px 25px;
@@ -600,14 +493,12 @@
             color: white;
 
             font-family: Georgia, serif;
-
             font-size: 1rem;
 
             cursor: pointer;
 
             box-shadow:
-                0 8px 20px
-                rgba(189,69,109,.25);
+                0 8px 20px rgba(189,69,109,.25);
 
             transition: .3s ease;
         }
@@ -616,15 +507,12 @@
             transform: translateY(-3px);
 
             box-shadow:
-                0 12px 25px
-                rgba(189,69,109,.35);
+                0 12px 25px rgba(189,69,109,.35);
         }
 
         .surprise-message {
             max-height: 0;
-
             overflow: hidden;
-
             opacity: 0;
 
             transition:
@@ -635,28 +523,22 @@
 
         .surprise-message.show {
             max-height: 500px;
-
             opacity: 1;
-
             margin-top: 20px;
         }
 
         .surprise-message p {
             margin: 0;
 
-            padding:
-                clamp(15px, 4vw, 20px);
+            padding: clamp(15px, 4vw, 20px);
 
             border-radius: 18px;
 
             background: #fff1f6;
-
             border: 1px solid #f3c1d1;
 
             line-height: 1.7;
-
-            font-size:
-                clamp(.95rem, 3vw, 1rem);
+            font-size: clamp(.95rem, 3vw, 1rem);
         }
 
         /* =========================
@@ -665,19 +547,15 @@
 
         .wish-button {
             border: 1px solid #f0b4c7;
-
             border-radius: 50px;
 
             padding: 11px 21px;
-
             margin-top: 12px;
 
             background: #fff7fa;
-
             color: #c34f76;
 
             font-family: Georgia, serif;
-
             font-size: .98rem;
 
             cursor: pointer;
@@ -689,13 +567,11 @@
             transform: translateY(-2px);
 
             box-shadow:
-                0 7px 18px
-                rgba(195,79,118,.16);
+                0 7px 18px rgba(195,79,118,.16);
         }
 
         .wish-area {
             position: fixed;
-
             inset: 0;
 
             z-index: 20;
@@ -707,7 +583,6 @@
 
         .star {
             position: absolute;
-
             font-size: 22px;
 
             animation:
@@ -718,7 +593,6 @@
         }
 
         @keyframes wishFloat {
-
             0% {
                 transform:
                     translate(0,25px)
@@ -744,13 +618,10 @@
 
         .final-surprise {
             margin-top: 20px;
-
             padding: 0 8px;
 
             max-height: 0;
-
             overflow: hidden;
-
             opacity: 0;
 
             transition:
@@ -761,19 +632,14 @@
 
         .final-surprise.show {
             max-height: 300px;
-
             opacity: 1;
-
             padding: 15px 8px 4px;
         }
 
         .final-surprise strong {
             display: block;
-
             color: #c34f76;
-
             font-size: 1.2rem;
-
             margin-bottom: 8px;
         }
 
@@ -783,7 +649,6 @@
 
         .love-question-section {
             margin-top: 35px;
-
             padding-top: 25px;
 
             border-top:
@@ -799,7 +664,6 @@
                 clamp(1.15rem, 4vw, 1.4rem);
 
             font-weight: bold;
-
             margin-bottom: 20px;
         }
 
@@ -807,7 +671,6 @@
             display: flex;
 
             justify-content: center;
-
             align-items: center;
 
             gap: 15px;
@@ -820,15 +683,12 @@
         .btn-yes,
         .btn-no {
             border: none;
-
             border-radius: 50px;
 
             padding: 12px 28px;
 
             font-family: Georgia, serif;
-
             font-size: 1.05rem;
-
             font-weight: bold;
 
             cursor: pointer;
@@ -849,8 +709,7 @@
             color: white;
 
             box-shadow:
-                0 6px 15px
-                rgba(40,167,69,.3);
+                0 6px 15px rgba(40,167,69,.3);
         }
 
         .btn-yes:hover {
@@ -875,11 +734,9 @@
             color: white;
 
             box-shadow:
-                0 6px 15px
-                rgba(220,53,69,.3);
+                0 6px 15px rgba(220,53,69,.3);
 
             position: relative;
-
             z-index: 10;
         }
 
@@ -899,8 +756,7 @@
             border-radius: 20px;
 
             box-shadow:
-                0 10px 25px
-                rgba(195,79,118,.15);
+                0 10px 25px rgba(195,79,118,.15);
 
             animation:
                 cardAppear
@@ -911,7 +767,6 @@
 
         .love-response-card h2 {
             margin: 0 0 10px;
-
             color: #c34f76;
 
             font-size:
@@ -927,7 +782,6 @@
                 clamp(1rem, 3vw, 1.1rem);
 
             line-height: 1.6;
-
             font-weight: bold;
         }
 
@@ -937,7 +791,6 @@
 
         .music-player {
             margin-top: 30px;
-
             padding-top: 22px;
 
             border-top:
@@ -951,7 +804,6 @@
                 clamp(.85rem, 3vw, .95rem);
 
             font-weight: bold;
-
             line-height: 1.5;
 
             margin-bottom: 12px;
@@ -959,25 +811,19 @@
 
         audio {
             width: 100%;
-
             max-width: 390px;
-
             height: 42px;
         }
 
         .music-note {
             font-size: .78rem;
-
             color: #98717b;
-
             margin-top: 8px;
         }
 
         .footer {
             margin-top: 28px;
-
             font-size: .8rem;
-
             color: #a47783;
         }
 
@@ -1002,7 +848,6 @@
         }
 
         @keyframes clickHeart {
-
             from {
                 transform:
                     translate(-50%,-50%)
@@ -1029,15 +874,12 @@
 
         .yes-celebration {
             position: fixed;
-
             inset: 0;
 
             z-index: 100;
 
             display: flex;
-
             align-items: center;
-
             justify-content: center;
 
             padding: 18px;
@@ -1048,9 +890,7 @@
             backdrop-filter: blur(5px);
 
             opacity: 0;
-
             visibility: hidden;
-
             pointer-events: none;
 
             transition:
@@ -1060,17 +900,14 @@
 
         .yes-celebration.show {
             opacity: 1;
-
             visibility: visible;
         }
 
         .yes-content {
             display: flex;
-
             flex-direction: column;
 
             align-items: center;
-
             justify-content: center;
 
             width: min(850px,100%);
@@ -1081,8 +918,7 @@
         .yes-word {
             margin: 0;
 
-            padding:
-                clamp(12px, 4vw, 24px);
+            padding: clamp(12px, 4vw, 24px);
 
             color: #c34f76;
 
@@ -1096,19 +932,16 @@
             line-height: 1.1;
 
             font-weight: 900;
-
             letter-spacing: .01em;
 
             text-align: center;
 
             max-width: 100%;
-
             overflow-wrap: anywhere;
 
             text-shadow:
                 0 4px 0 #fff,
-                0 10px 30px
-                rgba(195,79,118,.35);
+                0 10px 30px rgba(195,79,118,.35);
 
             transform:
                 scale(.25)
@@ -1126,7 +959,6 @@
         }
 
         @keyframes yesWordPop {
-
             0% {
                 transform:
                     scale(.25)
@@ -1160,7 +992,6 @@
 
         .yes-word-sub {
             margin-top: 12px;
-
             padding: 0 15px;
 
             color: #56343e;
@@ -1194,12 +1025,9 @@
         }
 
         @keyframes subPop {
-
             to {
                 opacity: 1;
-
-                transform:
-                    translateY(0);
+                transform: translateY(0);
             }
         }
 
@@ -1219,7 +1047,6 @@
         }
 
         @keyframes celebrationHeart {
-
             0% {
                 transform:
                     translate(0,0)
@@ -1248,7 +1075,6 @@
         ========================= */
 
         @media (min-width: 600px) {
-
             body {
                 padding-left: 25px;
                 padding-right: 25px;
@@ -1265,7 +1091,6 @@
         ========================= */
 
         @media (min-width: 900px) {
-
             body {
                 padding-top: 50px;
                 padding-bottom: 50px;
@@ -1289,14 +1114,12 @@
         ========================= */
 
         @media (max-width: 380px) {
-
             body {
                 padding: 10px 7px;
             }
 
             .container {
-                padding:
-                    22px 14px 22px;
+                padding: 22px 14px 22px;
             }
 
             h1 {
@@ -1310,7 +1133,6 @@
             .btn-yes,
             .btn-no {
                 padding: 11px 23px;
-
                 font-size: 1rem;
             }
 
@@ -1328,7 +1150,6 @@
         ========================= */
 
         @media (hover: none) {
-
             .photo-frame:hover img {
                 transform: none;
             }
@@ -1352,28 +1173,16 @@
 <body>
 
     <!-- WISH EFFECT AREA -->
-    <div
-        class="wish-area"
-        id="wishArea">
-    </div>
+    <div class="wish-area" id="wishArea"></div>
 
-
-    <!-- =========================
-         YES CELEBRATION
-    ========================= -->
-
+    <!-- YES CELEBRATION -->
     <div
         class="yes-celebration"
         id="yesCelebration"
         aria-hidden="true"
     >
-
         <div class="yes-content">
-
-            <div
-                class="yes-word"
-                id="yesWord"
-            >
+            <div class="yes-word" id="yesWord">
                 Walang iwanan
             </div>
 
@@ -1381,103 +1190,72 @@
                 Bisag saputon or unsa pana,<br>
                 till death mag kuyog ta.
             </div>
-
         </div>
-
     </div>
 
-
     <!-- BACKGROUND GLOW -->
-
     <div class="glow one"></div>
     <div class="glow two"></div>
 
-
     <!-- FLOATING HEARTS -->
-
     <div class="heart">❤️</div>
     <div class="heart">♡</div>
     <div class="heart">💕</div>
     <div class="heart">♡</div>
     <div class="heart">❤️</div>
 
-
-    <!-- =========================
-         MAIN CONTENT
-    ========================= -->
-
+    <!-- MAIN CONTENT -->
     <main class="container">
 
         <div class="small-heart">
             ❤️
         </div>
 
-
         <h1>
             For Jeniesys
         </h1>
-
 
         <div class="subtitle">
             A little piece of my heart,
             made just for you.
         </div>
 
-
-        <!-- =========================
-             PHOTO 1
-        ========================= -->
-
+        <!-- PHOTO 1 -->
         <div class="photo-frame">
-
             <div class="photo-inner">
-
                 <img
                     src="photo1.jpg"
                     alt="A beautiful memory"
+                    onerror="this.alt='Photo 1 could not be loaded';"
                 >
-
             </div>
-
         </div>
 
-
-        <!-- =========================
-             PHOTO 2
-        ========================= -->
-
+        <!-- PHOTO 2 -->
         <div class="photo-frame">
-
             <div class="photo-inner">
-
                 <img
                     src="photo2.jpg"
                     alt="Love memory"
+                    onerror="this.alt='Photo 2 could not be loaded';"
                 >
-
             </div>
-
         </div>
 
-
         <!-- DIVIDER -->
-
         <div class="divider">
             <span>♡</span>
         </div>
 
-
-        <!-- =========================
-             ENVELOPE
-        ========================= -->
-
+        <!-- ENVELOPE -->
         <div
             class="envelope"
             id="envelope"
-            onclick="openEnvelope()"
             title="Click to open"
+            role="button"
+            tabindex="0"
+            aria-label="Open the love letter"
         >
-
             <div class="envelope-back"></div>
 
             <div class="envelope-letter">
@@ -1485,37 +1263,24 @@
             </div>
 
             <div class="envelope-flap"></div>
-
         </div>
 
-
-        <div
-            style="
-                color:#98717b;
-                font-size:.82rem;
-            "
-        >
+        <div style="color:#98717b;font-size:.82rem;">
             Click the envelope
         </div>
 
-
-        <!-- =========================
-             LETTER
-        ========================= -->
-
+        <!-- LETTER -->
         <section class="letter">
 
             <p class="opening">
                 Dearest Jeniesys,
             </p>
 
-
             <p>
                 I don't think there are enough
                 words in the world to completely
                 explain how much you mean to me.
             </p>
-
 
             <p>
                 Somehow, you became one of the
@@ -1525,7 +1290,6 @@
                 knowing that you're there can make
                 everything feel a little brighter.
             </p>
-
 
             <p>
                 Thank you for every smile, every
@@ -1539,7 +1303,6 @@
                 </span>
             </p>
 
-
             <p>
                 If I could give you one thing,
                 I would give you the ability to
@@ -1549,7 +1312,6 @@
                 you are.
             </p>
 
-
             <p>
                 No matter where life takes us,
                 I hope you always remember that
@@ -1557,34 +1319,26 @@
                 heart.
             </p>
 
-
             <p class="forever">
                 Forever and always.
             </p>
 
         </section>
 
-
-        <!-- =========================
-             SURPRISE
-        ========================= -->
-
+        <!-- SURPRISE -->
         <button
             class="surprise-button"
             id="surpriseButton"
-            onclick="showSurprise()"
+            type="button"
         >
             One More Thing...
         </button>
-
 
         <div
             id="surprise"
             class="surprise-message"
         >
-
             <p>
-
                 Jeniesys, this little page may
                 only be made of pictures, words,
                 and music, but behind every part
@@ -1604,29 +1358,22 @@
                 page, it reminds you that someone
                 wanted to create something
                 beautiful just to make you smile.
-
             </p>
-
         </div>
 
-
-        <!-- =========================
-             WISH
-        ========================= -->
-
+        <!-- WISH -->
         <button
             class="wish-button"
-            onclick="makeWish()"
+            id="wishButton"
+            type="button"
         >
             Make a Wish
         </button>
-
 
         <div
             class="final-surprise"
             id="finalSurprise"
         >
-
             <strong>
                 One last little message...
             </strong>
@@ -1638,49 +1385,39 @@
                 and moments that feel just as
                 special as this one.
             </div>
-
         </div>
 
-
-        <!-- =========================
-             LOVE QUESTION
-        ========================= -->
-
+        <!-- LOVE QUESTION -->
         <div class="love-question-section">
 
             <div class="love-question-title">
                 Do you love me?
             </div>
 
-
             <div class="btn-group">
 
                 <button
                     class="btn-yes"
-                    onclick="handleLoveYes()"
+                    id="btnYes"
+                    type="button"
                 >
                     Yes!
                 </button>
 
-
                 <button
                     class="btn-no"
                     id="btnNo"
-                    onmouseover="dodgeNoButton()"
-                    ontouchstart="dodgeNoButton()"
-                    onclick="dodgeNoButton()"
+                    type="button"
                 >
                     No
                 </button>
 
             </div>
 
-
             <div
                 class="love-response-card"
                 id="loveResponseCard"
             >
-
                 <h2>
                     YAAAAAY!
                 </h2>
@@ -1689,16 +1426,11 @@
                     Walang iwan bisag saputon
                     or unsa pana till death.
                 </p>
-
             </div>
 
         </div>
 
-
-        <!-- =========================
-             MUSIC
-        ========================= -->
-
+        <!-- MUSIC -->
         <div class="music-player">
 
             <div
@@ -1710,7 +1442,6 @@
                 Shania Twain
             </div>
 
-
             <audio
                 controls
                 loop
@@ -1721,7 +1452,6 @@
                 the audio element.
             </audio>
 
-
             <div
                 class="music-note"
                 id="musicNote"
@@ -1731,102 +1461,140 @@
 
         </div>
 
-
         <!-- FOOTER -->
-
         <div class="footer">
             Made with love for Jeniesys
         </div>
 
     </main>
 
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================= -->
-
     <script>
+        "use strict";
+
+        /* =========================
+           GET ELEMENTS
+        ========================= */
+
+        const envelope =
+            document.getElementById("envelope");
+
+        const surpriseButton =
+            document.getElementById("surpriseButton");
+
+        const surprise =
+            document.getElementById("surprise");
+
+        const finalSurprise =
+            document.getElementById("finalSurprise");
+
+        const wishButton =
+            document.getElementById("wishButton");
+
+        const wishArea =
+            document.getElementById("wishArea");
+
+        const btnYes =
+            document.getElementById("btnYes");
+
+        const btnNo =
+            document.getElementById("btnNo");
+
+        const celebration =
+            document.getElementById("yesCelebration");
+
+        const responseCard =
+            document.getElementById("loveResponseCard");
+
+        const audio =
+            document.getElementById("mainAudio");
+
+        const musicTitle =
+            document.getElementById("musicTitle");
+
+        const musicNote =
+            document.getElementById("musicNote");
+
 
         /* =========================
            SURPRISE MESSAGE
         ========================= */
 
-        function showSurprise() {
+        surpriseButton.addEventListener(
+            "click",
+            function () {
 
-            const message =
-                document.getElementById("surprise");
+                const isOpen =
+                    surprise.classList.toggle("show");
 
-            const button =
-                document.getElementById(
-                    "surpriseButton"
-                );
+                if (isOpen) {
 
-            message.classList.toggle("show");
+                    surpriseButton.textContent =
+                        "Hide the message";
 
+                    setTimeout(function () {
 
-            if (
-                message.classList.contains("show")
-            ) {
+                        finalSurprise.classList.add(
+                            "show"
+                        );
 
-                button.textContent =
-                    "Hide the message";
+                    }, 500);
 
+                } else {
 
-                setTimeout(() => {
+                    surpriseButton.textContent =
+                        "One More Thing...";
 
-                    document
-                        .getElementById(
-                            "finalSurprise"
-                        )
-                        .classList.add("show");
-
-                }, 500);
-
-            } else {
-
-                button.textContent =
-                    "One More Thing...";
-
-
-                document
-                    .getElementById(
-                        "finalSurprise"
-                    )
-                    .classList.remove("show");
+                    finalSurprise.classList.remove(
+                        "show"
+                    );
+                }
             }
-        }
+        );
 
 
         /* =========================
            ENVELOPE
         ========================= */
 
-        function openEnvelope() {
+        function toggleEnvelope() {
 
-            document
-                .getElementById("envelope")
-                .classList.toggle("open");
+            envelope.classList.toggle("open");
         }
+
+        envelope.addEventListener(
+            "click",
+            toggleEnvelope
+        );
+
+        envelope.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Enter" ||
+                    event.key === " "
+                ) {
+
+                    event.preventDefault();
+
+                    toggleEnvelope();
+                }
+            }
+        );
 
 
         /* =========================
            MAKE A WISH
         ========================= */
 
+        wishButton.addEventListener(
+            "click",
+            makeWish
+        );
+
         function makeWish() {
 
-            const area =
-                document.getElementById(
-                    "wishArea"
-                );
-
-
-            document
-                .getElementById(
-                    "finalSurprise"
-                )
-                .classList.add("show");
-
+            finalSurprise.classList.add("show");
 
             const symbols = [
                 "✨",
@@ -1836,7 +1604,6 @@
                 "✦"
             ];
 
-
             for (
                 let i = 0;
                 i < 28;
@@ -1844,13 +1611,9 @@
             ) {
 
                 const star =
-                    document.createElement(
-                        "span"
-                    );
-
+                    document.createElement("span");
 
                 star.className = "star";
-
 
                 star.textContent =
                     symbols[
@@ -1860,31 +1623,24 @@
                         )
                     ];
 
-
                 star.style.left =
                     (
                         50 +
-                        (Math.random() - .5) *
-                        20
+                        (Math.random() - .5) * 20
                     ) + "vw";
-
 
                 star.style.top =
                     (
                         55 +
-                        (Math.random() - .5) *
-                        12
+                        (Math.random() - .5) * 12
                     ) + "vh";
-
 
                 star.style.setProperty(
                     "--x",
                     (
-                        (Math.random() - .5) *
-                        75
+                        (Math.random() - .5) * 75
                     ) + "vw"
                 );
-
 
                 star.style.setProperty(
                     "--y",
@@ -1894,126 +1650,150 @@
                     ) + "vh"
                 );
 
-
                 star.style.animationDelay =
                     (
                         Math.random() * .45
                     ) + "s";
 
+                wishArea.appendChild(star);
 
-                area.appendChild(star);
-
-
-                setTimeout(() => {
-                    star.remove();
-                }, 3200);
+                setTimeout(
+                    () => star.remove(),
+                    3200
+                );
             }
         }
 
 
         /* =========================
-           DODGE NO BUTTON
+           NO BUTTON
         ========================= */
 
         function dodgeNoButton() {
 
-            const btnNo =
-                document.getElementById(
-                    "btnNo"
-                );
-
+            /*
+             * Change the button to fixed positioning
+             * so it can move anywhere on the screen.
+             */
 
             btnNo.style.position = "fixed";
 
-
             const padding = 15;
-
 
             const buttonWidth =
                 btnNo.offsetWidth;
 
-
             const buttonHeight =
                 btnNo.offsetHeight;
 
-
             const maxX =
-                Math.max(
-                    padding,
-                    window.innerWidth -
-                    buttonWidth -
-                    padding
-                );
-
+                window.innerWidth -
+                buttonWidth -
+                padding;
 
             const maxY =
-                Math.max(
-                    padding,
-                    window.innerHeight -
-                    buttonHeight -
-                    padding
-                );
-
+                window.innerHeight -
+                buttonHeight -
+                padding;
 
             const randomX =
                 Math.floor(
                     Math.random() *
-                    (maxX - padding + 1)
+                    Math.max(1, maxX - padding)
                 ) + padding;
-
 
             const randomY =
                 Math.floor(
                     Math.random() *
-                    (maxY - padding + 1)
+                    Math.max(1, maxY - padding)
                 ) + padding;
-
 
             btnNo.style.left =
                 randomX + "px";
-
 
             btnNo.style.top =
                 randomY + "px";
         }
 
 
+        /*
+         * Desktop:
+         * Move when the mouse approaches.
+         */
+
+        btnNo.addEventListener(
+            "mouseenter",
+            dodgeNoButton
+        );
+
+
+        /*
+         * Mobile:
+         * Move when touched.
+         */
+
+        btnNo.addEventListener(
+            "touchstart",
+            function (event) {
+
+                event.preventDefault();
+
+                dodgeNoButton();
+            },
+            {
+                passive: false
+            }
+        );
+
+
+        /*
+         * If somehow clicked, move it again.
+         */
+
+        btnNo.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                dodgeNoButton();
+            }
+        );
+
+
         /* =========================
-           YES CLICK
+           YES BUTTON
         ========================= */
+
+        btnYes.addEventListener(
+            "click",
+            handleLoveYes
+        );
+
 
         function handleLoveYes() {
 
-            const celebration =
-                document.getElementById(
-                    "yesCelebration"
-                );
-
-
-            const responseCard =
-                document.getElementById(
-                    "loveResponseCard"
-                );
-
+            /*
+             * Show response card.
+             */
 
             responseCard.style.display =
                 "block";
 
 
-            /* Restart animation */
+            /*
+             * Restart celebration animation.
+             */
 
             celebration.classList.remove(
                 "show"
             );
 
-
             void celebration.offsetWidth;
-
 
             celebration.classList.add(
                 "show"
             );
-
 
             celebration.setAttribute(
                 "aria-hidden",
@@ -2021,9 +1801,103 @@
             );
 
 
-            /* =========================
-               HEART BURST
-            ========================= */
+            /*
+             * HEART BURST
+             */
+
+            createCelebrationHearts();
+
+
+            /*
+             * CHANGE MUSIC
+             */
+
+            const nextSong =
+                "song2.mp3";
+
+            audio.src = nextSong;
+
+            musicTitle.textContent =
+                "Now Playing: Ikaw Ang Aking Mahal - VST & Company";
+
+            musicNote.textContent =
+                "Playing the special song...";
+
+            audio.load();
+
+
+            const playPromise =
+                audio.play();
+
+            if (
+                playPromise !== undefined
+            ) {
+
+                playPromise.catch(
+                    function () {
+
+                        musicNote.textContent =
+                            "Tap Play to start the song.";
+                    }
+                );
+            }
+
+
+            /*
+             * CONFETTI
+             */
+
+            if (
+                typeof confetti === "function"
+            ) {
+
+                confetti({
+                    particleCount: 160,
+                    spread: 95,
+                    startVelocity: 45,
+
+                    origin: {
+                        y: .6
+                    }
+                });
+            }
+
+
+            /*
+             * HEART FIREWORKS
+             */
+
+            launchHeartFireworks();
+
+
+            /*
+             * CLOSE CELEBRATION
+             * after 3 seconds.
+             */
+
+            setTimeout(
+                function () {
+
+                    celebration.classList.remove(
+                        "show"
+                    );
+
+                    celebration.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+                },
+                3000
+            );
+        }
+
+
+        /* =========================
+           CELEBRATION HEARTS
+        ========================= */
+
+        function createCelebrationHearts() {
 
             const heartSymbols = [
                 "❤️",
@@ -2033,7 +1907,6 @@
                 "✨"
             ];
 
-
             for (
                 let i = 0;
                 i < 26;
@@ -2041,14 +1914,10 @@
             ) {
 
                 const heart =
-                    document.createElement(
-                        "span"
-                    );
-
+                    document.createElement("span");
 
                 heart.className =
                     "celebration-heart";
-
 
                 heart.textContent =
                     heartSymbols[
@@ -2058,198 +1927,45 @@
                         )
                     ];
 
-
                 heart.style.left = "50%";
                 heart.style.top = "50%";
-
 
                 heart.style.setProperty(
                     "--x",
                     (
-                        (Math.random() - .5) *
-                        85
+                        (Math.random() - .5) * 85
                     ) + "vw"
                 );
-
 
                 heart.style.setProperty(
                     "--y",
                     (
-                        (Math.random() - .5) *
-                        75
+                        (Math.random() - .5) * 75
                     ) + "vh"
                 );
-
 
                 heart.style.setProperty(
                     "--r",
                     (
-                        (Math.random() - .5) *
-                        90
+                        (Math.random() - .5) * 90
                     ) + "deg"
                 );
-
 
                 heart.style.animationDelay =
                     (
                         Math.random() * .25
                     ) + "s";
 
-
                 celebration.appendChild(
                     heart
                 );
 
-
-                setTimeout(() => {
-                    heart.remove();
-                }, 2200);
-            }
-
-
-            /* =========================
-               CHANGE MUSIC
-            ========================= */
-
-            const audio =
-                document.getElementById(
-                    "mainAudio"
-                );
-
-
-            const musicTitle =
-                document.getElementById(
-                    "musicTitle"
-                );
-
-
-            const musicNote =
-                document.getElementById(
-                    "musicNote"
-                );
-
-
-            /*
-             * IMPORTANT:
-             * song2.mp3 must be in the
-             * same folder as index.html.
-             */
-
-            const nextSong =
-                "song2.mp3";
-
-
-            audio.src = nextSong;
-
-
-            musicTitle.textContent =
-                "Now Playing: Ikaw Ang Aking Mahal - VST & Company";
-
-
-            musicNote.textContent =
-                "Playing the special song...";
-
-
-            audio.load();
-
-
-            const playPromise =
-                audio.play();
-
-
-            if (
-                playPromise !== undefined
-            ) {
-
-                playPromise.catch(
-                    function(error) {
-
-                        console.warn(
-                            "Audio playback failed:",
-                            error
-                        );
-
-
-                        musicNote.textContent =
-                            "Tap Play to start the song.";
-                    }
+                setTimeout(
+                    () => heart.remove(),
+                    2200
                 );
             }
-
-
-            /* =========================
-               CONFETTI
-            ========================= */
-
-            if (
-                typeof confetti === "function"
-            ) {
-
-                confetti({
-
-                    particleCount: 160,
-
-                    spread: 95,
-
-                    startVelocity: 45,
-
-                    origin: {
-                        y: .6
-                    }
-
-                });
-            }
-
-
-            /* HEART FIREWORKS */
-
-            launchHeartFireworks();
-
-
-            /* =========================
-               CLOSE POPUP
-            ========================= */
-
-            setTimeout(() => {
-
-                celebration.classList.remove(
-                    "show"
-                );
-
-
-                celebration.setAttribute(
-                    "aria-hidden",
-                    "true"
-                );
-
-            }, 3000);
         }
-
-
-        /* =========================
-           AUDIO ERROR
-        ========================= */
-
-        document
-            .getElementById("mainAudio")
-            .addEventListener(
-                "error",
-                function() {
-
-                    console.error(
-                        "Audio error:",
-                        this.error
-                    );
-
-
-                    document
-                        .getElementById(
-                            "musicNote"
-                        )
-                        .textContent =
-                        "Audio file could not be loaded. Check that song1.mp3 is in the same folder as index.html.";
-                }
-            );
 
 
         /* =========================
@@ -2258,22 +1974,25 @@
 
         function launchHeartFireworks() {
 
+            if (
+                typeof confetti !== "function"
+            ) {
+                return;
+            }
+
             const duration =
                 3 * 1000;
-
 
             const animationEnd =
                 Date.now() + duration;
 
-
             const interval =
                 setInterval(
-                    function() {
+                    function () {
 
                         const timeLeft =
                             animationEnd -
                             Date.now();
-
 
                         if (
                             timeLeft <= 0
@@ -2286,45 +2005,29 @@
                             return;
                         }
 
+                        confetti({
+                            particleCount: 15,
+                            startVelocity: 30,
+                            spread: 360,
+                            ticks: 60,
 
-                        if (
-                            typeof confetti ===
-                            "function"
-                        ) {
+                            origin: {
+                                x: Math.random(),
+                                y:
+                                    Math.random() - .2
+                            },
 
-                            confetti({
+                            shapes: [
+                                "circle"
+                            ],
 
-                                particleCount: 15,
-
-                                startVelocity: 30,
-
-                                spread: 360,
-
-                                ticks: 60,
-
-                                origin: {
-
-                                    x:
-                                        Math.random(),
-
-                                    y:
-                                        Math.random() -
-                                        .2
-                                },
-
-                                shapes: [
-                                    "circle"
-                                ],
-
-                                colors: [
-                                    "#ff0055",
-                                    "#ff6699",
-                                    "#ff3366",
-                                    "#ffffff"
-                                ]
-
-                            });
-                        }
+                            colors: [
+                                "#ff0055",
+                                "#ff6699",
+                                "#ff3366",
+                                "#ffffff"
+                            ]
+                        });
 
                     },
                     250
@@ -2333,65 +2036,77 @@
 
 
         /* =========================
+           AUDIO ERROR
+        ========================= */
+
+        audio.addEventListener(
+            "error",
+            function () {
+
+                console.error(
+                    "Audio error:",
+                    audio.error
+                );
+
+                musicNote.textContent =
+                    "Audio file could not be loaded. Make sure the MP3 file is in the same folder as index.html.";
+            }
+        );
+
+
+        /* =========================
            CLICK HEART EFFECT
         ========================= */
 
         document.addEventListener(
             "click",
-            function(e) {
+            function (event) {
+
+                /*
+                 * Don't create hearts when clicking
+                 * interactive elements.
+                 */
 
                 if (
-                    e.target.closest(
+                    event.target.closest(
                         "button, audio, .envelope, a"
                     )
                 ) {
                     return;
                 }
 
-
                 const heart =
-                    document.createElement(
-                        "span"
-                    );
-
+                    document.createElement("span");
 
                 heart.className =
                     "click-heart";
-
 
                 heart.textContent =
                     Math.random() > .5
                         ? "♡"
                         : "♥";
 
-
                 heart.style.left =
-                    e.clientX + "px";
-
+                    event.clientX + "px";
 
                 heart.style.top =
-                    e.clientY + "px";
-
+                    event.clientY + "px";
 
                 heart.style.setProperty(
                     "--dx",
                     (
-                        (Math.random() - .5) *
-                        70
+                        (Math.random() - .5) * 70
                     ) + "px"
                 );
-
 
                 document.body.appendChild(
                     heart
                 );
 
-
-                setTimeout(() => {
-
-                    heart.remove();
-
-                }, 1200);
+                setTimeout(
+                    () => heart.remove(),
+                    1200
+                );
             }
         );
 
@@ -2402,60 +2117,65 @@
 
         window.addEventListener(
             "resize",
-            function() {
-
-                const btnNo =
-                    document.getElementById(
-                        "btnNo"
-                    );
-
+            function () {
 
                 if (
-                    btnNo.style.position ===
+                    btnNo.style.position !==
                     "fixed"
                 ) {
-
-                    const rect =
-                        btnNo.getBoundingClientRect();
-
-
-                    const maxX =
-                        window.innerWidth -
-                        rect.width -
-                        10;
-
-
-                    const maxY =
-                        window.innerHeight -
-                        rect.height -
-                        10;
-
-
-                    if (
-                        rect.right >
-                        window.innerWidth
-                    ) {
-
-                        btnNo.style.left =
-                            Math.max(
-                                10,
-                                maxX
-                            ) + "px";
-                    }
-
-
-                    if (
-                        rect.bottom >
-                        window.innerHeight
-                    ) {
-
-                        btnNo.style.top =
-                            Math.max(
-                                10,
-                                maxY
-                            ) + "px";
-                    }
+                    return;
                 }
+
+                const rect =
+                    btnNo.getBoundingClientRect();
+
+                const maxX =
+                    window.innerWidth -
+                    rect.width -
+                    10;
+
+                const maxY =
+                    window.innerHeight -
+                    rect.height -
+                    10;
+
+                let newX =
+                    Math.min(
+                        Math.max(rect.left, 10),
+                        maxX
+                    );
+
+                let newY =
+                    Math.min(
+                        Math.max(rect.top, 10),
+                        maxY
+                    );
+
+                btnNo.style.left =
+                    newX + "px";
+
+                btnNo.style.top =
+                    newY + "px";
+            }
+        );
+
+
+        /* =========================
+           PAGE LOAD CHECK
+        ========================= */
+
+        window.addEventListener(
+            "load",
+            function () {
+
+                console.log(
+                    "Love page loaded successfully."
+                );
+
+                console.log(
+                    "Required files:",
+                    "photo1.jpg, photo2.jpg, song1.mp3, song2.mp3"
+                );
             }
         );
 
@@ -2463,4 +2183,4 @@
 
 </body>
 </html>
-```
+ 
