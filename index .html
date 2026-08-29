@@ -1,11 +1,13 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>For Jeniesys ❤️</title>
+    <title>For Jeniesys</title>
 
+    <!-- Confetti library -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
     <style>
@@ -20,19 +22,34 @@
         body {
             margin: 0;
             min-height: 100vh;
+
             font-family: Georgia, "Times New Roman", serif;
             color: #4a2934;
 
             background:
-                radial-gradient(circle at 10% 20%, rgba(255,255,255,.7), transparent 25%),
-                radial-gradient(circle at 90% 80%, rgba(255,255,255,.6), transparent 25%),
-                linear-gradient(135deg, #f8c8dc, #f9d9e7, #f6b6cf);
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(255,255,255,.7),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 90% 80%,
+                    rgba(255,255,255,.6),
+                    transparent 25%
+                ),
+                linear-gradient(
+                    135deg,
+                    #f8c8dc,
+                    #f9d9e7,
+                    #f6b6cf
+                );
 
             display: flex;
             justify-content: center;
             align-items: flex-start;
 
             padding: clamp(15px, 4vw, 45px) 12px;
+
             overflow-x: hidden;
         }
 
@@ -42,23 +59,31 @@
 
         .glow {
             position: fixed;
+
             width: 250px;
             height: 250px;
+
             border-radius: 50%;
+
             filter: blur(60px);
+
             opacity: .35;
+
             pointer-events: none;
+
             z-index: 0;
         }
 
         .glow.one {
             background: #ffffff;
+
             top: -80px;
             left: -80px;
         }
 
         .glow.two {
             background: #ff8fb8;
+
             bottom: -100px;
             right: -80px;
         }
@@ -69,11 +94,21 @@
 
         .heart {
             position: fixed;
+
             bottom: -30px;
+
             font-size: 20px;
+
             opacity: 0;
-            animation: floatHeart 8s linear infinite;
+
+            animation:
+                floatHeart
+                8s
+                linear
+                infinite;
+
             pointer-events: none;
+
             z-index: 1;
         }
 
@@ -102,8 +137,12 @@
         }
 
         @keyframes floatHeart {
+
             0% {
-                transform: translateY(0) rotate(0deg);
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
                 opacity: 0;
             }
 
@@ -116,7 +155,10 @@
             }
 
             100% {
-                transform: translateY(-110vh) rotate(25deg);
+                transform:
+                    translateY(-110vh)
+                    rotate(25deg);
+
                 opacity: 0;
             }
         }
@@ -127,39 +169,55 @@
 
         .container {
             position: relative;
+
             z-index: 2;
 
-            width: min(620px, 100%);
+            width: min(650px, 100%);
+
             margin: auto;
 
-            background: rgba(255, 255, 255, .92);
+            background: rgba(255,255,255,.92);
+
             backdrop-filter: blur(12px);
 
             border: 1px solid rgba(255,255,255,.9);
-            border-radius: clamp(20px, 4vw, 30px);
 
-            padding: clamp(25px, 5vw, 42px)
-                     clamp(16px, 5vw, 35px)
-                     clamp(25px, 5vw, 35px);
+            border-radius:
+                clamp(20px, 4vw, 30px);
+
+            padding:
+                clamp(25px, 5vw, 42px)
+                clamp(16px, 5vw, 35px)
+                clamp(25px, 5vw, 35px);
 
             text-align: center;
 
             box-shadow:
-                0 25px 60px rgba(150, 55, 95, .20),
-                0 5px 15px rgba(150, 55, 95, .10);
+                0 25px 60px rgba(150,55,95,.20),
+                0 5px 15px rgba(150,55,95,.10);
 
-            animation: cardAppear 1.2s ease;
+            animation:
+                cardAppear
+                1.2s
+                ease;
         }
 
         @keyframes cardAppear {
+
             from {
                 opacity: 0;
-                transform: translateY(30px) scale(.97);
+
+                transform:
+                    translateY(30px)
+                    scale(.97);
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0) scale(1);
+
+                transform:
+                    translateY(0)
+                    scale(1);
             }
         }
 
@@ -168,11 +226,17 @@
         ========================= */
 
         .small-heart {
-            font-size: clamp(22px, 6vw, 30px);
-            animation: heartbeat 1.8s infinite;
+            font-size:
+                clamp(22px, 6vw, 30px);
+
+            animation:
+                heartbeat
+                1.8s
+                infinite;
         }
 
         @keyframes heartbeat {
+
             0%, 100% {
                 transform: scale(1);
             }
@@ -195,23 +259,28 @@
 
             color: #c34f76;
 
-            font-size: clamp(2rem, 8vw, 3.2rem);
+            font-size:
+                clamp(2rem, 8vw, 3.2rem);
+
             line-height: 1.15;
 
             text-shadow:
-                0 3px 12px rgba(195,79,118,.15);
+                0 3px 12px
+                rgba(195,79,118,.15);
         }
 
         .subtitle {
             color: #95606f;
 
-            font-size: clamp(.9rem, 3vw, 1rem);
+            font-size:
+                clamp(.9rem, 3vw, 1rem);
 
             font-style: italic;
 
             line-height: 1.5;
 
-            margin-bottom: clamp(18px, 5vw, 28px);
+            margin-bottom:
+                clamp(18px, 5vw, 28px);
         }
 
         /* =========================
@@ -220,29 +289,43 @@
 
         .photo-frame {
             width: min(390px, 100%);
-            height: clamp(230px, 65vw, 330px);
 
-            margin: clamp(18px, 5vw, 27px) auto;
+            height:
+                clamp(230px, 65vw, 330px);
+
+            margin:
+                clamp(18px, 5vw, 27px)
+                auto;
 
             padding: 7px;
 
-            border-radius: clamp(17px, 4vw, 24px);
+            border-radius:
+                clamp(17px, 4vw, 24px);
 
-            background: linear-gradient(
-                135deg,
-                #f4a6bd,
-                #ffffff,
-                #e98ca9
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #f4a6bd,
+                    #ffffff,
+                    #e98ca9
+                );
 
             box-shadow:
-                0 15px 35px rgba(180,70,110,.25),
-                0 0 35px rgba(244,166,189,.35);
+                0 15px 35px
+                rgba(180,70,110,.25),
 
-            animation: photoFloat 4s ease-in-out infinite;
+                0 0 35px
+                rgba(244,166,189,.35);
+
+            animation:
+                photoFloat
+                4s
+                ease-in-out
+                infinite;
         }
 
         @keyframes photoFloat {
+
             0%, 100% {
                 transform: translateY(0);
             }
@@ -271,7 +354,8 @@
 
             display: block;
 
-            transition: transform .7s ease;
+            transition:
+                transform .7s ease;
         }
 
         .photo-frame:hover img {
@@ -284,11 +368,14 @@
 
         .divider {
             display: flex;
+
             align-items: center;
 
             gap: 12px;
 
-            margin: clamp(22px, 5vw, 30px) 0;
+            margin:
+                clamp(22px, 5vw, 30px)
+                0;
         }
 
         .divider::before,
@@ -299,23 +386,26 @@
 
             flex: 1;
 
-            background: linear-gradient(
-                to right,
-                transparent,
-                #e8a6b9
-            );
+            background:
+                linear-gradient(
+                    to right,
+                    transparent,
+                    #e8a6b9
+                );
         }
 
         .divider::after {
-            background: linear-gradient(
-                to left,
-                transparent,
-                #e8a6b9
-            );
+            background:
+                linear-gradient(
+                    to left,
+                    transparent,
+                    #e8a6b9
+                );
         }
 
         .divider span {
             color: #d05d80;
+
             font-size: 18px;
         }
 
@@ -324,8 +414,11 @@
         ========================= */
 
         .envelope {
-            width: min(150px, 42vw);
-            height: min(105px, 30vw);
+            width:
+                min(150px, 42vw);
+
+            height:
+                min(105px, 30vw);
 
             margin: 18px auto 10px;
 
@@ -335,50 +428,60 @@
 
             perspective: 700px;
 
-            transition: transform .3s ease;
+            transition:
+                transform .3s ease;
         }
 
         .envelope:hover {
-            transform: translateY(-4px) scale(1.03);
+            transform:
+                translateY(-4px)
+                scale(1.03);
         }
 
         .envelope-back {
             position: absolute;
+
             inset: 0;
 
             border-radius: 12px;
 
-            background: linear-gradient(
-                145deg,
-                #f5a5bd,
-                #d85b82
-            );
+            background:
+                linear-gradient(
+                    145deg,
+                    #f5a5bd,
+                    #d85b82
+                );
 
             box-shadow:
-                0 12px 25px rgba(180,70,110,.22);
+                0 12px 25px
+                rgba(180,70,110,.22);
         }
 
         .envelope-flap {
             position: absolute;
+
             inset: 0;
 
             height: 65%;
 
-            background: linear-gradient(
-                145deg,
-                #ffd5e2,
-                #ed86a7
-            );
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffd5e2,
+                    #ed86a7
+                );
 
-            clip-path: polygon(
-                0 0,
-                100% 0,
-                50% 100%
-            );
+            clip-path:
+                polygon(
+                    0 0,
+                    100% 0,
+                    50% 100%
+                );
 
             transform-origin: top center;
 
-            transition: transform .65s ease;
+            transition:
+                transform .65s ease;
 
             z-index: 3;
         }
@@ -398,9 +501,11 @@
 
             z-index: 2;
 
-            transition: transform .7s ease;
+            transition:
+                transform .7s ease;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
@@ -409,7 +514,8 @@
             font-size: 1.7rem;
 
             box-shadow:
-                0 3px 10px rgba(100,40,60,.12);
+                0 3px 10px
+                rgba(100,40,60,.12);
         }
 
         .envelope.open .envelope-flap {
@@ -425,7 +531,8 @@
         ========================= */
 
         .letter {
-            font-size: clamp(.98rem, 3vw, 1.08rem);
+            font-size:
+                clamp(.98rem, 3vw, 1.08rem);
 
             line-height: 1.8;
 
@@ -435,7 +542,8 @@
         }
 
         .letter .opening {
-            font-size: clamp(1.15rem, 4vw, 1.3rem);
+            font-size:
+                clamp(1.15rem, 4vw, 1.3rem);
 
             color: #c34f76;
 
@@ -448,11 +556,13 @@
 
         .highlight {
             color: #c34f76;
+
             font-weight: bold;
         }
 
         .forever {
-            font-size: clamp(1.05rem, 4vw, 1.2rem);
+            font-size:
+                clamp(1.05rem, 4vw, 1.2rem);
 
             color: #c34f76;
 
@@ -480,11 +590,12 @@
 
             max-width: 100%;
 
-            background: linear-gradient(
-                135deg,
-                #d65d82,
-                #bd456d
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #d65d82,
+                    #bd456d
+                );
 
             color: white;
 
@@ -495,7 +606,8 @@
             cursor: pointer;
 
             box-shadow:
-                0 8px 20px rgba(189,69,109,.25);
+                0 8px 20px
+                rgba(189,69,109,.25);
 
             transition: .3s ease;
         }
@@ -504,7 +616,8 @@
             transform: translateY(-3px);
 
             box-shadow:
-                0 12px 25px rgba(189,69,109,.35);
+                0 12px 25px
+                rgba(189,69,109,.35);
         }
 
         .surprise-message {
@@ -531,7 +644,8 @@
         .surprise-message p {
             margin: 0;
 
-            padding: clamp(15px, 4vw, 20px);
+            padding:
+                clamp(15px, 4vw, 20px);
 
             border-radius: 18px;
 
@@ -541,7 +655,8 @@
 
             line-height: 1.7;
 
-            font-size: clamp(.95rem, 3vw, 1rem);
+            font-size:
+                clamp(.95rem, 3vw, 1rem);
         }
 
         /* =========================
@@ -574,11 +689,13 @@
             transform: translateY(-2px);
 
             box-shadow:
-                0 7px 18px rgba(195,79,118,.16);
+                0 7px 18px
+                rgba(195,79,118,.16);
         }
 
         .wish-area {
             position: fixed;
+
             inset: 0;
 
             z-index: 20;
@@ -601,6 +718,7 @@
         }
 
         @keyframes wishFloat {
+
             0% {
                 transform:
                     translate(0,25px)
@@ -668,7 +786,8 @@
 
             padding-top: 25px;
 
-            border-top: 1px dashed #e8a6b9;
+            border-top:
+                1px dashed #e8a6b9;
 
             position: relative;
         }
@@ -676,7 +795,8 @@
         .love-question-title {
             color: #c34f76;
 
-            font-size: clamp(1.15rem, 4vw, 1.4rem);
+            font-size:
+                clamp(1.15rem, 4vw, 1.4rem);
 
             font-weight: bold;
 
@@ -719,39 +839,44 @@
         }
 
         .btn-yes {
-            background: linear-gradient(
-                135deg,
-                #28a745,
-                #218838
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #28a745,
+                    #218838
+                );
 
             color: white;
 
             box-shadow:
-                0 6px 15px rgba(40,167,69,.3);
+                0 6px 15px
+                rgba(40,167,69,.3);
         }
 
         .btn-yes:hover {
             transform: scale(1.08);
 
-            background: linear-gradient(
-                135deg,
-                #34ce57,
-                #218838
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #34ce57,
+                    #218838
+                );
         }
 
         .btn-no {
-            background: linear-gradient(
-                135deg,
-                #dc3545,
-                #c82333
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #dc3545,
+                    #c82333
+                );
 
             color: white;
 
             box-shadow:
-                0 6px 15px rgba(220,53,69,.3);
+                0 6px 15px
+                rgba(220,53,69,.3);
 
             position: relative;
 
@@ -763,16 +888,19 @@
 
             margin-top: 25px;
 
-            padding: clamp(17px, 4vw, 22px);
+            padding:
+                clamp(17px, 4vw, 22px);
 
             background: #fff0f5;
 
-            border: 2px solid #f4a6bd;
+            border:
+                2px solid #f4a6bd;
 
             border-radius: 20px;
 
             box-shadow:
-                0 10px 25px rgba(195,79,118,.15);
+                0 10px 25px
+                rgba(195,79,118,.15);
 
             animation:
                 cardAppear
@@ -786,7 +914,8 @@
 
             color: #c34f76;
 
-            font-size: clamp(1.1rem, 4vw, 1.3rem);
+            font-size:
+                clamp(1.1rem, 4vw, 1.3rem);
         }
 
         .love-response-card p {
@@ -794,7 +923,8 @@
 
             color: #56343e;
 
-            font-size: clamp(1rem, 3vw, 1.1rem);
+            font-size:
+                clamp(1rem, 3vw, 1.1rem);
 
             line-height: 1.6;
 
@@ -810,13 +940,15 @@
 
             padding-top: 22px;
 
-            border-top: 1px solid #edc0ce;
+            border-top:
+                1px solid #edc0ce;
         }
 
         .music-title {
             color: #c34f76;
 
-            font-size: clamp(.85rem, 3vw, .95rem);
+            font-size:
+                clamp(.85rem, 3vw, .95rem);
 
             font-weight: bold;
 
@@ -870,6 +1002,7 @@
         }
 
         @keyframes clickHeart {
+
             from {
                 transform:
                     translate(-50%,-50%)
@@ -909,7 +1042,8 @@
 
             padding: 18px;
 
-            background: rgba(74,41,52,.18);
+            background:
+                rgba(74,41,52,.18);
 
             backdrop-filter: blur(5px);
 
@@ -939,27 +1073,25 @@
 
             justify-content: center;
 
-            width: min(850px, 100%);
+            width: min(850px,100%);
 
             text-align: center;
         }
 
-        /*
-           WHOLE MESSAGE POPS UP TOGETHER
-        */
-
         .yes-word {
             margin: 0;
 
-            padding: clamp(12px, 4vw, 24px);
+            padding:
+                clamp(12px, 4vw, 24px);
 
             color: #c34f76;
 
-            font-size: clamp(
-                2.2rem,
-                9vw,
-                5.5rem
-            );
+            font-size:
+                clamp(
+                    2.2rem,
+                    9vw,
+                    5.5rem
+                );
 
             line-height: 1.1;
 
@@ -975,7 +1107,8 @@
 
             text-shadow:
                 0 4px 0 #fff,
-                0 10px 30px rgba(195,79,118,.35);
+                0 10px 30px
+                rgba(195,79,118,.35);
 
             transform:
                 scale(.25)
@@ -993,6 +1126,7 @@
         }
 
         @keyframes yesWordPop {
+
             0% {
                 transform:
                     scale(.25)
@@ -1031,11 +1165,12 @@
 
             color: #56343e;
 
-            font-size: clamp(
-                1rem,
-                4vw,
-                1.35rem
-            );
+            font-size:
+                clamp(
+                    1rem,
+                    4vw,
+                    1.35rem
+                );
 
             line-height: 1.5;
 
@@ -1043,7 +1178,8 @@
 
             opacity: 0;
 
-            transform: translateY(12px);
+            transform:
+                translateY(12px);
 
             font-weight: bold;
         }
@@ -1058,6 +1194,7 @@
         }
 
         @keyframes subPop {
+
             to {
                 opacity: 1;
 
@@ -1069,7 +1206,8 @@
         .celebration-heart {
             position: absolute;
 
-            font-size: clamp(20px, 5vw, 30px);
+            font-size:
+                clamp(20px,5vw,30px);
 
             animation:
                 celebrationHeart
@@ -1081,6 +1219,7 @@
         }
 
         @keyframes celebrationHeart {
+
             0% {
                 transform:
                     translate(0,0)
@@ -1122,7 +1261,7 @@
         }
 
         /* =========================
-           LAPTOP / DESKTOP
+           DESKTOP
         ========================= */
 
         @media (min-width: 900px) {
@@ -1133,7 +1272,7 @@
             }
 
             .container {
-                width: min(650px, 90vw);
+                width: min(650px,90vw);
             }
 
             .photo-frame {
@@ -1171,6 +1310,7 @@
             .btn-yes,
             .btn-no {
                 padding: 11px 23px;
+
                 font-size: 1rem;
             }
 
@@ -1211,194 +1351,307 @@
 
 <body>
 
-    <div class="wish-area" id="wishArea"></div>
+    <!-- WISH EFFECT AREA -->
+    <div
+        class="wish-area"
+        id="wishArea">
+    </div>
 
-    <!-- YES CELEBRATION -->
+
+    <!-- =========================
+         YES CELEBRATION
+    ========================= -->
+
     <div
         class="yes-celebration"
         id="yesCelebration"
         aria-hidden="true"
     >
+
         <div class="yes-content">
 
-            <div class="yes-word" id="yesWord">
-                Walang iwanan 💖
+            <div
+                class="yes-word"
+                id="yesWord"
+            >
+                Walang iwanan
             </div>
 
             <div class="yes-word-sub">
                 Bisag saputon or unsa pana,<br>
-                till death mag kuyog ta. ❤️
+                till death mag kuyog ta.
             </div>
 
         </div>
+
     </div>
+
+
+    <!-- BACKGROUND GLOW -->
 
     <div class="glow one"></div>
     <div class="glow two"></div>
 
+
     <!-- FLOATING HEARTS -->
+
     <div class="heart">❤️</div>
     <div class="heart">♡</div>
     <div class="heart">💕</div>
     <div class="heart">♡</div>
     <div class="heart">❤️</div>
 
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
     <main class="container">
 
-        <div class="small-heart">❤️</div>
+        <div class="small-heart">
+            ❤️
+        </div>
 
-        <h1>For Jeniesys</h1>
+
+        <h1>
+            For Jeniesys
+        </h1>
+
 
         <div class="subtitle">
-            A little piece of my heart, made just for you.
+            A little piece of my heart,
+            made just for you.
         </div>
 
-        <!-- PHOTO 1 -->
+
+        <!-- =========================
+             PHOTO 1
+        ========================= -->
+
         <div class="photo-frame">
+
             <div class="photo-inner">
+
                 <img
-                    src="f545c7b6-19e5-45b8-897e-a42b3bdd5465.jpg"
+                    src="photo1.jpg"
                     alt="A beautiful memory"
                 >
+
             </div>
+
         </div>
 
-        <!-- PHOTO 2 -->
+
+        <!-- =========================
+             PHOTO 2
+        ========================= -->
+
         <div class="photo-frame">
+
             <div class="photo-inner">
+
                 <img
-                    src="loveee.jpg"
+                    src="photo2.jpg"
                     alt="Love memory"
                 >
+
             </div>
+
         </div>
+
+
+        <!-- DIVIDER -->
 
         <div class="divider">
             <span>♡</span>
         </div>
 
-        <!-- ENVELOPE -->
+
+        <!-- =========================
+             ENVELOPE
+        ========================= -->
+
         <div
             class="envelope"
             id="envelope"
             onclick="openEnvelope()"
             title="Click to open"
         >
+
             <div class="envelope-back"></div>
-            <div class="envelope-letter">💌</div>
+
+            <div class="envelope-letter">
+                💌
+            </div>
+
             <div class="envelope-flap"></div>
+
         </div>
 
-        <div style="color:#98717b;font-size:.82rem;">
-            Click the envelope ✨
+
+        <div
+            style="
+                color:#98717b;
+                font-size:.82rem;
+            "
+        >
+            Click the envelope
         </div>
 
-        <!-- LETTER -->
+
+        <!-- =========================
+             LETTER
+        ========================= -->
+
         <section class="letter">
 
             <p class="opening">
                 Dearest Jeniesys,
             </p>
 
-            <p>
-                I don't think there are enough words in the world
-                to completely explain how much you mean to me.
-            </p>
 
             <p>
-                Somehow, you became one of the most beautiful parts
-                of my days. Your presence can make ordinary moments
-                feel special, and simply knowing that you're there
-                can make everything feel a little brighter.
+                I don't think there are enough
+                words in the world to completely
+                explain how much you mean to me.
             </p>
 
+
             <p>
-                Thank you for every smile, every memory, every little
-                moment, and every reason you have given me to be happy.
+                Somehow, you became one of the
+                most beautiful parts of my days.
+                Your presence can make ordinary
+                moments feel special, and simply
+                knowing that you're there can make
+                everything feel a little brighter.
+            </p>
+
+
+            <p>
+                Thank you for every smile, every
+                memory, every little moment, and
+                every reason you have given me to
+                be happy.
+
                 <span class="highlight">
-                    You are someone I will always treasure.
+                    You are someone I will always
+                    treasure.
                 </span>
             </p>
 
-            <p>
-                If I could give you one thing, I would give you the
-                ability to see yourself through my eyes — just for a
-                moment — so you could understand how incredibly
-                special you are.
-            </p>
 
             <p>
-                No matter where life takes us, I hope you always
-                remember that you have a special place in my heart.
+                If I could give you one thing,
+                I would give you the ability to
+                see yourself through my eyes —
+                just for a moment — so you could
+                understand how incredibly special
+                you are.
             </p>
+
+
+            <p>
+                No matter where life takes us,
+                I hope you always remember that
+                you have a special place in my
+                heart.
+            </p>
+
 
             <p class="forever">
-                Forever and always. ❤️
+                Forever and always.
             </p>
 
         </section>
 
-        <!-- SURPRISE -->
+
+        <!-- =========================
+             SURPRISE
+        ========================= -->
+
         <button
             class="surprise-button"
+            id="surpriseButton"
             onclick="showSurprise()"
         >
-            💌 One More Thing...
+            One More Thing...
         </button>
+
 
         <div
             id="surprise"
             class="surprise-message"
         >
+
             <p>
-                Jeniesys, this little page may only be made of
-                pictures, words, and music, but behind every part
+
+                Jeniesys, this little page may
+                only be made of pictures, words,
+                and music, but behind every part
                 of it is a simple message:
 
                 <br><br>
 
                 <strong>
-                    You are deeply appreciated, genuinely cared for,
-                    and incredibly special to me. ❤️
+                    You are deeply appreciated,
+                    genuinely cared for, and
+                    incredibly special to me.
                 </strong>
 
                 <br><br>
 
-                I hope whenever you see this page, it reminds you
-                that someone wanted to create something beautiful
-                just to make you smile.
+                I hope whenever you see this
+                page, it reminds you that someone
+                wanted to create something
+                beautiful just to make you smile.
+
             </p>
+
         </div>
 
-        <!-- WISH -->
+
+        <!-- =========================
+             WISH
+        ========================= -->
+
         <button
             class="wish-button"
             onclick="makeWish()"
         >
-            ✨ Make a Wish
+            Make a Wish
         </button>
+
 
         <div
             class="final-surprise"
             id="finalSurprise"
         >
+
             <strong>
-                💗 One last little message...
+                One last little message...
             </strong>
 
             <div>
-                May the days ahead bring you plenty of reasons
-                to smile, beautiful memories to keep, and moments
-                that feel just as special as this one.
+                May the days ahead bring you
+                plenty of reasons to smile,
+                beautiful memories to keep,
+                and moments that feel just as
+                special as this one.
             </div>
+
         </div>
 
-        <!-- LOVE QUESTION -->
+
+        <!-- =========================
+             LOVE QUESTION
+        ========================= -->
+
         <div class="love-question-section">
 
             <div class="love-question-title">
-                Do you love me? 🥺❤️
+                Do you love me?
             </div>
+
 
             <div class="btn-group">
 
@@ -1406,8 +1659,9 @@
                     class="btn-yes"
                     onclick="handleLoveYes()"
                 >
-                    Yes! 💕
+                    Yes!
                 </button>
+
 
                 <button
                     class="btn-no"
@@ -1416,61 +1670,80 @@
                     ontouchstart="dodgeNoButton()"
                     onclick="dodgeNoButton()"
                 >
-                    No 😜
+                    No
                 </button>
 
             </div>
+
 
             <div
                 class="love-response-card"
                 id="loveResponseCard"
             >
+
                 <h2>
-                    💖 YAAAAAY! 💖
+                    YAAAAAY!
                 </h2>
 
                 <p>
-                    Walang iwan bisag saputon or unsa pana
-                    till death ❤️✨
+                    Walang iwan bisag saputon
+                    or unsa pana till death.
                 </p>
+
             </div>
 
         </div>
 
-        <!-- MUSIC -->
+
+        <!-- =========================
+             MUSIC
+        ========================= -->
+
         <div class="music-player">
 
             <div
                 class="music-title"
                 id="musicTitle"
             >
-                🎵 Now Playing:
-                You're Still The One - Shania Twain
+                Now Playing:
+                You're Still The One -
+                Shania Twain
             </div>
+
 
             <audio
                 controls
                 loop
                 id="mainAudio"
-                src="Shania Twain - You're Still The One (Lyrics).mp3"
+                src="song1.mp3"
             >
-                Your browser does not support the audio element.
+                Your browser does not support
+                the audio element.
             </audio>
+
 
             <div
                 class="music-note"
                 id="musicNote"
             >
-                Tap ▶ to play the music.
+                Tap Play to play the music.
             </div>
 
         </div>
 
+
+        <!-- FOOTER -->
+
         <div class="footer">
-            Made with ❤️ for Jeniesys
+            Made with love for Jeniesys
         </div>
 
     </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
 
     <script>
 
@@ -1484,30 +1757,41 @@
                 document.getElementById("surprise");
 
             const button =
-                document.querySelector(".surprise-button");
+                document.getElementById(
+                    "surpriseButton"
+                );
 
             message.classList.toggle("show");
 
-            if (message.classList.contains("show")) {
 
-                button.innerHTML =
-                    "💗 Hide the message";
+            if (
+                message.classList.contains("show")
+            ) {
+
+                button.textContent =
+                    "Hide the message";
+
 
                 setTimeout(() => {
 
                     document
-                        .getElementById("finalSurprise")
+                        .getElementById(
+                            "finalSurprise"
+                        )
                         .classList.add("show");
 
                 }, 500);
 
             } else {
 
-                button.innerHTML =
-                    "💌 One More Thing...";
+                button.textContent =
+                    "One More Thing...";
+
 
                 document
-                    .getElementById("finalSurprise")
+                    .getElementById(
+                        "finalSurprise"
+                    )
                     .classList.remove("show");
             }
         }
@@ -1532,11 +1816,17 @@
         function makeWish() {
 
             const area =
-                document.getElementById("wishArea");
+                document.getElementById(
+                    "wishArea"
+                );
+
 
             document
-                .getElementById("finalSurprise")
+                .getElementById(
+                    "finalSurprise"
+                )
                 .classList.add("show");
+
 
             const symbols = [
                 "✨",
@@ -1546,12 +1836,21 @@
                 "✦"
             ];
 
-            for (let i = 0; i < 28; i++) {
+
+            for (
+                let i = 0;
+                i < 28;
+                i++
+            ) {
 
                 const star =
-                    document.createElement("span");
+                    document.createElement(
+                        "span"
+                    );
+
 
                 star.className = "star";
+
 
                 star.textContent =
                     symbols[
@@ -1561,30 +1860,49 @@
                         )
                     ];
 
+
                 star.style.left =
-                    (50 + (Math.random() - .5) * 20) +
-                    "vw";
+                    (
+                        50 +
+                        (Math.random() - .5) *
+                        20
+                    ) + "vw";
+
 
                 star.style.top =
-                    (55 + (Math.random() - .5) * 12) +
-                    "vh";
+                    (
+                        55 +
+                        (Math.random() - .5) *
+                        12
+                    ) + "vh";
+
 
                 star.style.setProperty(
                     "--x",
-                    ((Math.random() - .5) * 75) +
-                    "vw"
+                    (
+                        (Math.random() - .5) *
+                        75
+                    ) + "vw"
                 );
+
 
                 star.style.setProperty(
                     "--y",
-                    (45 + Math.random() * 35) +
-                    "vh"
+                    (
+                        45 +
+                        Math.random() * 35
+                    ) + "vh"
                 );
 
+
                 star.style.animationDelay =
-                    (Math.random() * .45) + "s";
+                    (
+                        Math.random() * .45
+                    ) + "s";
+
 
                 area.appendChild(star);
+
 
                 setTimeout(() => {
                     star.remove();
@@ -1600,21 +1918,24 @@
         function dodgeNoButton() {
 
             const btnNo =
-                document.getElementById("btnNo");
+                document.getElementById(
+                    "btnNo"
+                );
 
-            /*
-             * Fixed positioning allows the button
-             * to move freely on phones and laptops.
-             */
+
             btnNo.style.position = "fixed";
 
+
             const padding = 15;
+
 
             const buttonWidth =
                 btnNo.offsetWidth;
 
+
             const buttonHeight =
                 btnNo.offsetHeight;
+
 
             const maxX =
                 Math.max(
@@ -1624,6 +1945,7 @@
                     padding
                 );
 
+
             const maxY =
                 Math.max(
                     padding,
@@ -1632,11 +1954,13 @@
                     padding
                 );
 
+
             const randomX =
                 Math.floor(
                     Math.random() *
                     (maxX - padding + 1)
                 ) + padding;
+
 
             const randomY =
                 Math.floor(
@@ -1644,8 +1968,10 @@
                     (maxY - padding + 1)
                 ) + padding;
 
+
             btnNo.style.left =
                 randomX + "px";
+
 
             btnNo.style.top =
                 randomY + "px";
@@ -1663,22 +1989,31 @@
                     "yesCelebration"
                 );
 
+
             const responseCard =
                 document.getElementById(
                     "loveResponseCard"
                 );
 
+
             responseCard.style.display =
                 "block";
 
-            /*
-             * Restart popup animation.
-             */
-            celebration.classList.remove("show");
+
+            /* Restart animation */
+
+            celebration.classList.remove(
+                "show"
+            );
+
 
             void celebration.offsetWidth;
 
-            celebration.classList.add("show");
+
+            celebration.classList.add(
+                "show"
+            );
+
 
             celebration.setAttribute(
                 "aria-hidden",
@@ -1698,13 +2033,22 @@
                 "✨"
             ];
 
-            for (let i = 0; i < 26; i++) {
+
+            for (
+                let i = 0;
+                i < 26;
+                i++
+            ) {
 
                 const heart =
-                    document.createElement("span");
+                    document.createElement(
+                        "span"
+                    );
+
 
                 heart.className =
                     "celebration-heart";
+
 
                 heart.textContent =
                     heartSymbols[
@@ -1714,31 +2058,48 @@
                         )
                     ];
 
+
                 heart.style.left = "50%";
                 heart.style.top = "50%";
 
+
                 heart.style.setProperty(
                     "--x",
-                    ((Math.random() - .5) * 85) +
-                    "vw"
+                    (
+                        (Math.random() - .5) *
+                        85
+                    ) + "vw"
                 );
+
 
                 heart.style.setProperty(
                     "--y",
-                    ((Math.random() - .5) * 75) +
-                    "vh"
+                    (
+                        (Math.random() - .5) *
+                        75
+                    ) + "vh"
                 );
+
 
                 heart.style.setProperty(
                     "--r",
-                    ((Math.random() - .5) * 90) +
-                    "deg"
+                    (
+                        (Math.random() - .5) *
+                        90
+                    ) + "deg"
                 );
 
-                heart.style.animationDelay =
-                    (Math.random() * .25) + "s";
 
-                celebration.appendChild(heart);
+                heart.style.animationDelay =
+                    (
+                        Math.random() * .25
+                    ) + "s";
+
+
+                celebration.appendChild(
+                    heart
+                );
+
 
                 setTimeout(() => {
                     heart.remove();
@@ -1755,41 +2116,64 @@
                     "mainAudio"
                 );
 
+
             const musicTitle =
                 document.getElementById(
                     "musicTitle"
                 );
+
 
             const musicNote =
                 document.getElementById(
                     "musicNote"
                 );
 
+
+            /*
+             * IMPORTANT:
+             * song2.mp3 must be in the
+             * same folder as index.html.
+             */
+
             const nextSong =
-                "VST& Co.  Ikaw Ang Aking Mahal (Official Lyrics and Chords).mp3";
+                "song2.mp3";
+
 
             audio.src = nextSong;
 
-            musicTitle.innerHTML =
-                "🎵 Now Playing: Ikaw Ang Aking Mahal - VST & Company";
+
+            musicTitle.textContent =
+                "Now Playing: Ikaw Ang Aking Mahal - VST & Company";
+
+
+            musicNote.textContent =
+                "Playing the special song...";
+
 
             audio.load();
+
 
             const playPromise =
                 audio.play();
 
-            if (playPromise !== undefined) {
 
-                playPromise.catch(function(error) {
+            if (
+                playPromise !== undefined
+            ) {
 
-                    console.warn(
-                        "Audio playback failed:",
-                        error
-                    );
+                playPromise.catch(
+                    function(error) {
 
-                    musicNote.innerHTML =
-                        "⚠️ Tap ▶ on the audio player to start the song!";
-                });
+                        console.warn(
+                            "Audio playback failed:",
+                            error
+                        );
+
+
+                        musicNote.textContent =
+                            "Tap Play to start the song.";
+                    }
+                );
             }
 
 
@@ -1797,9 +2181,12 @@
                CONFETTI
             ========================= */
 
-            if (typeof confetti === "function") {
+            if (
+                typeof confetti === "function"
+            ) {
 
                 confetti({
+
                     particleCount: 160,
 
                     spread: 95,
@@ -1809,13 +2196,12 @@
                     origin: {
                         y: .6
                     }
+
                 });
             }
 
 
-            /* =========================
-               HEART FIREWORKS
-            ========================= */
+            /* HEART FIREWORKS */
 
             launchHeartFireworks();
 
@@ -1829,6 +2215,7 @@
                 celebration.classList.remove(
                     "show"
                 );
+
 
                 celebration.setAttribute(
                     "aria-hidden",
@@ -1850,14 +2237,17 @@
                 function() {
 
                     console.error(
-                        "Audio error encountered:",
+                        "Audio error:",
                         this.error
                     );
 
+
                     document
-                        .getElementById("musicNote")
-                        .innerHTML =
-                        "⚠️ Could not find audio file. Make sure your folder is named 'nusic' and contains the exact file names.";
+                        .getElementById(
+                            "musicNote"
+                        )
+                        .textContent =
+                        "Audio file could not be loaded. Check that song1.mp3 is in the same folder as index.html.";
                 }
             );
 
@@ -1868,57 +2258,77 @@
 
         function launchHeartFireworks() {
 
-            const duration = 3 * 1000;
+            const duration =
+                3 * 1000;
+
 
             const animationEnd =
                 Date.now() + duration;
 
+
             const interval =
-                setInterval(function() {
+                setInterval(
+                    function() {
 
-                    const timeLeft =
-                        animationEnd -
-                        Date.now();
+                        const timeLeft =
+                            animationEnd -
+                            Date.now();
 
-                    if (timeLeft <= 0) {
 
-                        return clearInterval(
-                            interval
-                        );
-                    }
+                        if (
+                            timeLeft <= 0
+                        ) {
 
-                    if (typeof confetti === "function") {
+                            clearInterval(
+                                interval
+                            );
 
-                        confetti({
+                            return;
+                        }
 
-                            particleCount: 15,
 
-                            startVelocity: 30,
+                        if (
+                            typeof confetti ===
+                            "function"
+                        ) {
 
-                            spread: 360,
+                            confetti({
 
-                            ticks: 60,
+                                particleCount: 15,
 
-                            origin: {
-                                x: Math.random(),
+                                startVelocity: 30,
 
-                                y:
-                                    Math.random() -
-                                    .2
-                            },
+                                spread: 360,
 
-                            shapes: ["circle"],
+                                ticks: 60,
 
-                            colors: [
-                                "#ff0055",
-                                "#ff6699",
-                                "#ff3366",
-                                "#ffffff"
-                            ]
-                        });
-                    }
+                                origin: {
 
-                }, 250);
+                                    x:
+                                        Math.random(),
+
+                                    y:
+                                        Math.random() -
+                                        .2
+                                },
+
+                                shapes: [
+                                    "circle"
+                                ],
+
+                                colors: [
+                                    "#ff0055",
+                                    "#ff6699",
+                                    "#ff3366",
+                                    "#ffffff"
+                                ]
+
+                            });
+                        }
+
+                    },
+                    250
+                );
         }
 
 
@@ -1938,35 +2348,49 @@
                     return;
                 }
 
+
                 const heart =
-                    document.createElement("span");
+                    document.createElement(
+                        "span"
+                    );
+
 
                 heart.className =
                     "click-heart";
+
 
                 heart.textContent =
                     Math.random() > .5
                         ? "♡"
                         : "♥";
 
+
                 heart.style.left =
                     e.clientX + "px";
+
 
                 heart.style.top =
                     e.clientY + "px";
 
+
                 heart.style.setProperty(
                     "--dx",
-                    ((Math.random() - .5) * 70) +
-                    "px"
+                    (
+                        (Math.random() - .5) *
+                        70
+                    ) + "px"
                 );
+
 
                 document.body.appendChild(
                     heart
                 );
 
+
                 setTimeout(() => {
+
                     heart.remove();
+
                 }, 1200);
             }
         );
@@ -1974,7 +2398,6 @@
 
         /* =========================
            KEEP NO BUTTON ON SCREEN
-           WHEN RESIZING
         ========================= */
 
         window.addEventListener(
@@ -1986,6 +2409,7 @@
                         "btnNo"
                     );
 
+
                 if (
                     btnNo.style.position ===
                     "fixed"
@@ -1994,24 +2418,42 @@
                     const rect =
                         btnNo.getBoundingClientRect();
 
+
                     const maxX =
                         window.innerWidth -
                         rect.width -
                         10;
+
 
                     const maxY =
                         window.innerHeight -
                         rect.height -
                         10;
 
-                    if (rect.right > window.innerWidth) {
+
+                    if (
+                        rect.right >
+                        window.innerWidth
+                    ) {
+
                         btnNo.style.left =
-                            Math.max(10, maxX) + "px";
+                            Math.max(
+                                10,
+                                maxX
+                            ) + "px";
                     }
 
-                    if (rect.bottom > window.innerHeight) {
+
+                    if (
+                        rect.bottom >
+                        window.innerHeight
+                    ) {
+
                         btnNo.style.top =
-                            Math.max(10, maxY) + "px";
+                            Math.max(
+                                10,
+                                maxY
+                            ) + "px";
                     }
                 }
             }
@@ -2021,3 +2463,4 @@
 
 </body>
 </html>
+```
